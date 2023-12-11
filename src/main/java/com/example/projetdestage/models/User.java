@@ -1,7 +1,6 @@
 package com.example.projetdestage.models;
 
 import lombok.Data;
-import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -9,7 +8,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 
@@ -54,6 +52,10 @@ public class User implements Serializable {
     @Column(name = "phone_number_verified")
     private boolean phoneNumberVerified;
 
+    private  String otp;
+    
+    private  String PhoneConfirmed;
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(  name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -75,5 +77,17 @@ public class User implements Serializable {
 
     public void setValidateOtp(boolean validateOtp) {
         this.validateOtp= validateOtp;
+    }
+
+    public void setOtpValidated(boolean b) {
+
+    }
+
+
+    public boolean isPhoneConfirmed() {
+        return false;
+    }
+
+    public void setActivationCode(String activationCode) {
     }
 }

@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class OtpValidationRequest {
 
 	private String phoneNumber;
-	private String otpNumber;
-	private  String Username;
+	private String otp;
+	//private  String Username;
 
 }

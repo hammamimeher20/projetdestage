@@ -21,8 +21,8 @@ public class SignupRequest {
     @NotBlank
     @Size(min = 6, max = 40)
     private String password;
-    @NotBlank
-    private String phoneNumber;
+     private  String PhoneNumber;
+
 
 
 
@@ -30,7 +30,9 @@ public class SignupRequest {
     public String getUsername() {
         return username;
     }
-
+    public String getPhoneNumber() {
+        return PhoneNumber;
+    }
     public void setUsername(String username) {
         this.username = username;
     }
@@ -60,11 +62,15 @@ public class SignupRequest {
         this.role = role;
     }
 
-    public String getPhoneNumber() {
+   /* public String getPhoneNumber() {
         return this.phoneNumber=phoneNumber;
     }
 
     public String setPhoneNumber(String phoneNumber) {
         return this.phoneNumber=phoneNumber;
     }
+
+
+    */
+
 }

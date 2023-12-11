@@ -11,11 +11,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class OtpRequest {
 
-    private String  phoneNumber;
+    private String  PhoneNumber;
 
-    private String username;
+    //private String username;
 
-    private String password;
 
 
 }
